@@ -1,11 +1,14 @@
 // Tabs: filter the featured products by category
 const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('[data-panel]');
+const catLinks = document.querySelectorAll('.catbar__a');
 function showTab(id) {
   tabs.forEach(t => t.classList.toggle('is-on', t.dataset.tab === id));
+  catLinks.forEach(t => t.classList.toggle('is-on', t.dataset.tab === id));
   panels.forEach(p => { p.hidden = p.dataset.panel !== id; });
 }
 tabs.forEach(t => t.addEventListener('click', () => showTab(t.dataset.tab)));
+catLinks.forEach(c => c.addEventListener('click', () => showTab(c.dataset.tab)));
 // Category circles open the matching tab (the page then scrolls to #featured)
 document.querySelectorAll('.circle').forEach(c => c.addEventListener('click', () => showTab(c.dataset.tab)));
 

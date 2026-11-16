@@ -4,7 +4,7 @@
   --radius:16px; --ff-d:'Cairo',sans-serif; --ff-b:'IBM Plex Sans Arabic',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:130px}
+html{scroll-behavior:smooth;scroll-padding-top:190px}
 body{font-family:var(--ff-b);color:var(--ink);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -47,6 +47,14 @@ h1,h2,h3,h4{font-family:var(--ff-d);line-height:1.3;color:var(--green)}
 .mainnav a::after{content:"";position:absolute;inset-inline:0;bottom:2px;height:2px;background:var(--green);transform:scaleX(0);transition:transform .25s}
 .mainnav a:hover::after,.mainnav a.is-on::after{transform:scaleX(1)}
 .mainnav a.is-on{color:var(--green);font-weight:600}
+
+/* categories bar (in header) */
+.catbar{background:var(--paper);border-top:1px solid var(--line)}
+.catbar__in{display:flex;justify-content:center;gap:6px;overflow-x:auto;scrollbar-width:none;padding-block:9px}
+.catbar__a{padding:6px 16px;border-radius:8px;font-size:14px;font-weight:500;color:var(--muted);white-space:nowrap;transition:background .2s,color .2s}
+.catbar__a:hover{color:var(--green)}
+.catbar__a.is-on{background:#f3efc0;color:var(--green);font-weight:600}
+@media (max-width:900px){.catbar__in{justify-content:flex-start}}
 
 /* hero bento */
 .hero{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:16px;height:420px;margin-top:22px}
