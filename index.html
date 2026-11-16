@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body>
 
@@ -29,25 +29,20 @@
 
 <main>
 
-<!-- HERO: one large banner + two stacked -->
-<section class="hero container">
-  <a href="#featured" class="banner banner--main">
-    <div class="banner__txt">
-      <p class="eyebrow">١٠٠٪ طبيعي وعضوي</p>
-      <h1>حليب وزبادي<br>طازج من المزرعة</h1>
-      <p class="from">ابتداءً من <b>٣٢ ر.س</b></p>
-      <span class="btn btn--amber">تسوّق الآن</span>
+<!-- HERO: one full-width banner -->
+<section class="hero">
+  <picture>
+    <source media="(max-width:700px)" srcset="assets/banners/hero-mobile.webp">
+    <img class="hero__bg" src="assets/banners/hero-desktop.webp" alt="عسل وتمر وزيت زيتون ومكسرات عضوية">
+  </picture>
+  <div class="hero__in container">
+    <div class="hero__copy">
+      <p class="eyebrow">طازج &nbsp;•&nbsp; طبيعي &nbsp;•&nbsp; عضوي</p>
+      <h1>غذاء نظيف<br>لغدٍ أصحّ</h1>
+      <p class="lead">منتجات عضوية طبيعية من مزارع موثوقة، بدون مواد حافظة، تصلك مبرّدة إلى باب بيتك.</p>
+      <a href="#featured" class="btn btn--amber btn--lg">تسوّق الآن <svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></a>
     </div>
-    <img src="assets/banners/b1.webp" alt="منتجات زاد ماضينا العضوية">
-  </a>
-  <a href="#drinks" class="banner banner--side banner--light">
-    <div class="banner__txt"><h2>مشروبات<br>عضوية</h2><p>كمبوتشا وعصائر طبيعية</p></div>
-    <img src="assets/banners/b2.webp" alt="">
-  </a>
-  <a href="#kitchen" class="banner banner--side banner--dark">
-    <div class="banner__txt"><h2>المطبخ<br>العضوي</h2><p>حبوب وطحينة ودبس</p></div>
-    <img src="assets/banners/b3.webp" alt="">
-  </a>
+  </div>
 </section>
 
 <!-- BENEFITS -->
@@ -156,6 +151,6 @@
   <div class="footer__copy">© زاد ماضينا — جميع الحقوق محفوظة</div>
 </footer>
 
-<script src="js/main.js?v=9"></script>
+<script src="js/main.js?v=10"></script>
 </body>
 </html>
