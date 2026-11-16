@@ -4,7 +4,7 @@
   --radius:16px; --ff-d:'Cairo',sans-serif; --ff-b:'IBM Plex Sans Arabic',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:190px}
+html{scroll-behavior:smooth;scroll-padding-top:150px}
 body{font-family:var(--ff-b);color:var(--ink);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
