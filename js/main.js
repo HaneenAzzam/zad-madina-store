@@ -10,7 +10,7 @@ function showTab(id) {
 tabs.forEach(t => t.addEventListener('click', () => showTab(t.dataset.tab)));
 catLinks.forEach(c => c.addEventListener('click', () => showTab(c.dataset.tab)));
 // Category circles open the matching tab (the page then scrolls to #featured)
-document.querySelectorAll('.circle, .catcard, .cats2__all').forEach(c => c.addEventListener('click', () => showTab(c.dataset.tab)));
+document.querySelectorAll('.circle, .catcard, .cats2__all, .dbanner__btn').forEach(c => c.addEventListener('click', () => showTab(c.dataset.tab)));
 
 // Cart counter demo
 const counter = document.querySelector('.cart__n');
