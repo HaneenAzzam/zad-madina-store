@@ -1,7 +1,7 @@
 // Tabs: filter the featured products by category
 const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('[data-panel]');
-const catLinks = document.querySelectorAll('.catbar__a');
+const catLinks = document.querySelectorAll('.nav__a');
 function showTab(id) {
   tabs.forEach(t => t.classList.toggle('is-on', t.dataset.tab === id));
   catLinks.forEach(t => t.classList.toggle('is-on', t.dataset.tab === id));
