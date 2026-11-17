@@ -112,6 +112,8 @@ h1,h2,h3,h4{font-family:var(--ff-d);line-height:1.3;color:var(--green)}
 .tab.is-on{background:#f3efc0;color:var(--green);font-weight:600}
 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
 .grid[hidden]{display:none}
+.grid--4{grid-template-columns:repeat(4,1fr)}
+.dairy-row{margin-top:24px}
 
 /* cards */
 .card{background:#fff;border-radius:14px;padding:12px;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--line);transition:box-shadow .25s,transform .25s}
