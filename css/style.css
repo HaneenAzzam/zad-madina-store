@@ -114,6 +114,13 @@ h1,h2,h3,h4{font-family:var(--ff-d);line-height:1.3;color:var(--green)}
 .grid[hidden]{display:none}
 .grid--4{grid-template-columns:repeat(4,1fr)}
 .dairy-row{margin-top:24px}
+/* dairy products: same framed look as the category cards */
+.dairy-row .card{border:1px solid var(--line);box-shadow:none;padding:10px 10px 14px;text-align:center;gap:0}
+.dairy-row .card:hover{box-shadow:0 16px 30px -20px rgba(1,49,27,.5)}
+.dairy-row .card__img{aspect-ratio:1.15;border-radius:10px}
+.dairy-row .card__cat{display:none}
+.dairy-row .card h3{margin:12px 2px 8px;font-size:14.5px;font-weight:600;color:var(--green)}
+.dairy-row .card__foot{justify-content:center;gap:14px;margin:auto 2px 0}
 
 /* cards */
 .card{background:#fff;border-radius:14px;padding:12px;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--line);transition:box-shadow .25s,transform .25s}
