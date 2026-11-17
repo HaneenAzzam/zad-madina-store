@@ -12,8 +12,14 @@ catLinks.forEach(c => c.addEventListener('click', () => showTab(c.dataset.tab)))
 // Category cards open the matching tab (the page then scrolls to #featured)
 document.querySelectorAll('.catcard, .cats2__all, .dbanner__btn').forEach(c => c.addEventListener('click', () => showTab(c.dataset.tab)));
 
-// Cart counter demo
+// Cart counter demo + "added" feedback on the add-to-cart buttons
 const counter = document.querySelector('.cart__n');
-document.querySelectorAll('.cart-btn').forEach(b => b.addEventListener('click', () => {
-  counter.textContent = Number(counter.textContent) + 1;
-}));
+document.querySelectorAll('.add-btn').forEach(b => {
+  const label = b.innerHTML;
+  b.addEventListener('click', () => {
+    counter.textContent = Number(counter.textContent) + 1;
+    b.classList.add('is-added');
+    b.textContent = 'تمت الإضافة ✓';
+    setTimeout(() => { b.classList.remove('is-added'); b.innerHTML = label; }, 1400);
+  });
+});

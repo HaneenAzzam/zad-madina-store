@@ -137,6 +137,13 @@ h1,h2,h3,h4{font-family:var(--ff-d);line-height:1.3;color:var(--green)}
 .cart-btn svg{width:17px;height:17px}
 .cart-btn:hover{background:var(--green);color:#fff}
 
+/* add to cart button under each product */
+.add-btn{margin-top:12px;width:100%;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 14px;border-radius:10px;background:var(--green);color:#fff;font-size:14px;font-weight:600;transition:background .2s,transform .2s}
+.add-btn__plus{font-size:19px;line-height:1;font-weight:500}
+.add-btn:hover{background:var(--green-dark)}
+.add-btn:active{transform:scale(.98)}
+.add-btn.is-added{background:var(--amber);color:#1c2a10}
+
 /* promos */
 .promos{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:60px}
 .promo{position:relative;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;border-radius:var(--radius);overflow:hidden;height:190px}
