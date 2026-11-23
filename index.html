@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=38">
+<link rel="stylesheet" href="css/style.css?v=45">
 </head>
 <body>
 
@@ -29,16 +29,29 @@
 
 <main>
 
-<!-- HERO: one full-width banner in the store palette -->
-<section class="hero">
-  <div class="hero__in container">
-    <div class="hero__copy">
-      <p class="eyebrow">طازج &nbsp;•&nbsp; طبيعي &nbsp;•&nbsp; عضوي</p>
-      <h1>غذاء نظيف<br>لغدٍ أصحّ</h1>
-      <p class="lead">منتجات عضوية طبيعية من مزارع موثوقة، بدون مواد حافظة، تصلك مبرّدة إلى باب بيتك.</p>
-      <a href="#featured" class="btn btn--solid btn--lg">تسوّق الآن <svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></a>
+<!-- HERO: scene banner (blurred farm, wooden table, products in a crate) -->
+<section class="hero hero--scene">
+  <div class="hs-bg" aria-hidden="true"></div>
+  <div class="hs-field" aria-hidden="true"></div>
+  <div class="hs-bokeh" aria-hidden="true"></div>
+  <div class="hs-wash" aria-hidden="true"></div>
+  <span class="hs-leaf hs-leaf--tr"><svg viewBox="0 0 360 240" aria-hidden="true"><defs><linearGradient id="lghsleaftr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c4e04a"/><stop offset="1" stop-color="#6f9f2a"/></linearGradient></defs><g fill="url(#lghsleaftr)"><path d="M300 20C250 40 200 70 150 120" stroke="#6b8f2a" stroke-width="3" fill="none"/><path d="M290 24c16-26 46-34 64-24-6 26-30 40-64 24Z"/><path d="M262 44c8-30 36-44 58-38-2 28-24 46-58 38Z"/><path d="M232 66c0-28 22-48 46-46 2 28-16 48-46 46Z"/><path d="M204 88c-6-28 12-50 36-52 6 26-8 50-36 52Z"/><path d="M176 112c-12-24 2-48 24-54 10 24 0 48-24 54Z"/><path d="M276 60c-2 26-22 44-52 40 4-24 22-42 52-40Z"/><path d="M246 90c-4 24-22 38-48 34 4-22 20-36 48-34Z"/></g></svg></span>
+  <span class="hs-leaf hs-leaf--tl"><svg viewBox="0 0 360 240" aria-hidden="true"><defs><linearGradient id="lghsleaftl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c4e04a"/><stop offset="1" stop-color="#6f9f2a"/></linearGradient></defs><g fill="url(#lghsleaftl)"><path d="M300 20C250 40 200 70 150 120" stroke="#6b8f2a" stroke-width="3" fill="none"/><path d="M290 24c16-26 46-34 64-24-6 26-30 40-64 24Z"/><path d="M262 44c8-30 36-44 58-38-2 28-24 46-58 38Z"/><path d="M232 66c0-28 22-48 46-46 2 28-16 48-46 46Z"/><path d="M204 88c-6-28 12-50 36-52 6 26-8 50-36 52Z"/><path d="M176 112c-12-24 2-48 24-54 10 24 0 48-24 54Z"/><path d="M276 60c-2 26-22 44-52 40 4-24 22-42 52-40Z"/><path d="M246 90c-4 24-22 38-48 34 4-22 20-36 48-34Z"/></g></svg></span>
+  <div class="hs-table" aria-hidden="true"></div>
+  <div class="hs-stage" data-stage>
+    <img class="hs-fallback" src="assets/banners/b1.webp" alt="منتجات زاد ماضينا العضوية">
+    <div class="hs-crate" aria-hidden="true"></div>
+  </div>
+  <div class="hs-badge" aria-hidden="true"><b>١٠٠٪</b><span>عضوي<br>طبيعي</span></div>
+  <div class="hs-copy">
+    <div class="container hs-copy__in">
+      <div class="hero__copy">
+        <p class="eyebrow">طازج &nbsp;•&nbsp; طبيعي &nbsp;•&nbsp; عضوي</p>
+        <h1>غذاء نظيف<br>لغدٍ أصحّ</h1>
+        <p class="lead">منتجات عضوية طبيعية من مزارع موثوقة، بدون مواد حافظة، تصلك مبرّدة إلى باب بيتك.</p>
+        <a href="#best" class="btn btn--solid btn--lg">تسوّق الآن <svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></a>
+      </div>
     </div>
-    <img class="hero__img" src="assets/banners/b1.webp" alt="مربى التين والعسل والحليب والزبادي العضوي من زاد ماضينا">
   </div>
 </section>
 
@@ -306,6 +319,7 @@
   <div class="footer__copy">© زاد ماضينا — جميع الحقوق محفوظة</div>
 </footer>
 
-<script src="js/main.js?v=38"></script>
+<script src="js/main.js?v=45"></script>
+<script src="js/stage.js?v=45"></script>
 </body>
 </html>
