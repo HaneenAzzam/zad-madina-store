@@ -1,0 +1,63 @@
+:root{--green:#275741;--green-dark:#01311b;--amber:#f2b632;--cream:#fbf6e9;--ink:#17251d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'IBM Plex Sans Arabic',sans-serif;background:#fff;color:var(--ink);line-height:1.6}
+.page{width:min(1240px,100% - 32px);margin:32px auto 80px}
+h1.lab{font-family:'Cairo',sans-serif;font-size:22px;color:var(--green);margin-bottom:6px}
+p.note{color:#667a6e;font-size:14px;margin-bottom:28px}
+.tag{font-size:12px;color:#667a6e;margin:34px 0 10px}
+
+/* ---------- shared scene pieces (Kaif-style: warm light, depth, table, podium) ---------- */
+.scene{position:relative;overflow:hidden;border-radius:22px;isolation:isolate;
+  background:
+    radial-gradient(55% 70% at 22% 28%,rgba(255,247,222,.95) 0%,rgba(255,247,222,0) 65%),
+    linear-gradient(180deg,#eaf1e3 0%,#dde8d3 52%,#cddabf 100%)}
+.scene::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;filter:blur(7px);opacity:.9;
+  background:
+    radial-gradient(circle at 12% 22%,rgba(255,232,160,.55) 0 28px,transparent 30px),
+    radial-gradient(circle at 20% 12%,rgba(255,240,190,.5) 0 18px,transparent 20px),
+    radial-gradient(circle at 33% 26%,rgba(255,226,140,.4) 0 34px,transparent 36px),
+    radial-gradient(circle at 8% 40%,rgba(255,240,200,.45) 0 22px,transparent 24px),
+    radial-gradient(circle at 44% 16%,rgba(255,236,170,.35) 0 14px,transparent 16px)}
+.table{position:absolute;inset-inline:0;bottom:0;height:24%;z-index:1;
+  background:
+    repeating-linear-gradient(92deg,rgba(90,55,20,.07) 0 2px,transparent 2px 9px),
+    linear-gradient(180deg,#e2c898 0%,#c9a46d 100%);
+  box-shadow:inset 0 3px 0 rgba(255,255,255,.55),inset 0 14px 22px -14px rgba(255,255,255,.7)}
+.podium{position:absolute;z-index:2;border-radius:50%/38%;
+  background:linear-gradient(180deg,#fbf7ec 0%,#e6dfcb 100%);
+  box-shadow:0 22px 28px -12px rgba(70,45,10,.45),inset 0 -6px 10px rgba(120,95,50,.18)}
+.leaf{position:absolute;z-index:4;pointer-events:none;color:#3c6b34;filter:blur(1.5px)}
+.leaf svg{width:100%;height:100%;fill:currentColor;stroke:none}
+.prod{position:absolute;z-index:3;height:auto;filter:drop-shadow(0 16px 14px rgba(60,40,10,.38))}
+
+/* headline + pill button (copied pattern: big heavy Arabic, one accent word, white pill with amber chevron) */
+.copy{position:absolute;z-index:5}
+.copy h2{font-family:'Cairo',sans-serif;font-weight:900;color:var(--green-dark);line-height:1.15;text-shadow:0 2px 0 rgba(255,255,255,.55)}
+.copy h2 em{font-style:normal;color:#5d8c32}
+.copy p{color:#44584b;margin:10px 0 18px}
+.pill{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--green-dark);font-weight:700;border-radius:999px;padding:11px 26px 11px 22px;box-shadow:0 10px 22px -10px rgba(40,30,10,.5)}
+.pill b{color:#e0a300;font-size:1.25em;line-height:1}
+
+/* ---------- wide hero (21:8) ---------- */
+.hero-w{aspect-ratio:21/8;min-height:380px}
+.hero-w .table{height:22%}
+.hero-w .podium{left:3%;bottom:15%;width:60%;height:13%}
+.hero-w .prod{left:6%;bottom:21%;width:52%}
+.hero-w .leaf.a{width:150px;height:150px;left:-30px;top:-20px;transform:rotate(30deg);opacity:.8}
+.hero-w .leaf.b{width:110px;height:110px;left:34%;top:-26px;transform:rotate(-40deg);opacity:.55;filter:blur(3px)}
+.hero-w .copy{right:5%;top:50%;transform:translateY(-50%);max-width:40%}
+.hero-w .copy h2{font-size:clamp(34px,4.6vw,64px)}
+.hero-w .copy .k{font-weight:600;color:#5d8c32;letter-spacing:.06em;font-size:14px;margin-bottom:8px}
+
+/* ---------- square banners (1:1) ---------- */
+.row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.sq{aspect-ratio:1}
+.sq .table{height:26%}
+.sq .podium{left:7%;bottom:15%;width:86%;height:12%}
+.sq .prod{left:12%;bottom:22%;width:76%}
+.sq .copy{inset-inline:0;top:7%;text-align:center}
+.sq .copy h2{font-size:clamp(26px,3.4vw,44px)}
+.sq .pill{position:absolute;z-index:5;left:50%;bottom:5%;transform:translateX(-50%);white-space:nowrap;font-size:14px;padding:9px 22px 9px 18px}
+.sq .leaf.a{width:120px;height:120px;left:-26px;bottom:30%;transform:rotate(60deg);opacity:.75}
+.sq .leaf.b{width:100px;height:100px;right:-24px;top:34%;transform:rotate(-120deg);opacity:.6;filter:blur(3px)}
+@media (max-width:700px){.row{grid-template-columns:1fr}.hero-w{aspect-ratio:auto;min-height:520px}.hero-w .copy{position:relative;right:auto;top:auto;transform:none;max-width:none;padding:34px 24px 0;text-align:center}.hero-w .podium{bottom:8%;width:94%;left:3%}.hero-w .prod{width:90%;left:5%;bottom:13%}}
